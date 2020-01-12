@@ -15,15 +15,5 @@ spring:
 eureka:
   client:
     service-url:
-<<<<<<< HEAD
       defaultZone: http://localhost:8888/eureka   
-ProviderVersion: NurserProvider 7.7.7V
-=======
-      defaultZone: http://localhost:8888/eureka
-management:
-  endpoints:
-    web:
-      exposure:
-        include: refresh,health,info      
 ProviderVersion: NurserProvider 9.9.9V
->>>>>>> df36bc7c611b95cfcfc28ea9394689210636dc3a
