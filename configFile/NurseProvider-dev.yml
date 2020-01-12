@@ -21,4 +21,4 @@ management:
     web:
       exposure:
         include: refresh,health,info      
-ProviderVersion: NurserProvider 7.7.7V
+ProviderVersion: NurserProvider 8.8.8V
