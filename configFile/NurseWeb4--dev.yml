@@ -1,0 +1,38 @@
+server:
+  port: 1317
+spring:
+  thymeleaf:
+    cache: false
+  application:
+    name: NurseWeb4
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka,http://localhost:9999/eureka
+USERPROVIDER:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule
+    # 是否对所有操作都进行重试
+    OkToRetryOnAllOperations: true
+    # 切换实例的重试次数
+    MaxAutoRetriesNextServer: 1
+    # 对当前实例的重试次数
+    MaxAutoRetries: 1
+#设置com.xtl包的日志级别
+logging:
+  level:
+    com:
+      xtl: debug
+#开启Feign的熔断时间
+feign:
+  hystrix:
+    enabled: true
+#设定Hystrix熔断超时时间
+hystrix:
+  command:
+    default:
+      executation:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 6000
+

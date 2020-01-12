@@ -1,0 +1,30 @@
+server:
+  port: 1316
+spring:
+  thymeleaf:
+    cache: false
+  application:
+    name: NurseWeb3
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka,http://localhost:9999/eureka
+NURSERPROVIDER:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+    # 是否对所有操作都进行重试
+    OkToRetryOnAllOperations: true
+    # 切换实例的重试次数
+    MaxAutoRetriesNextServer: 3
+    # 对当前实例的重试次数
+    MaxAutoRetries: 3
+#设定Hystrix熔断超时时间
+hystrix:
+  command:
+    default:
+      executation:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 6000
+
+
