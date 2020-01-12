@@ -1,5 +1,5 @@
 server:
-  port: 10086
+  port: 10088
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/springboot?serverTimezone=UTC
