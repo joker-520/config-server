@@ -16,4 +16,4 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8888/eureka   
-ProviderVersion: NurserProvider 9.9.9V
+ProviderVersion: NurserProvider 1.1.1V
